@@ -1,0 +1,18 @@
+{% extends 'layout.twig' %} {% block body %}
+<input id="form" type="text" name="" value="" />
+<input id="clickMe" type="submit" value="search" />
+
+<p> {{company}} </p>
+
+<script type="text/javascript">
+    //- Using an anonymous function:
+    document.getElementById("clickMe").onclick = function (e) {
+        e.preventDefault();
+        console.log('salut')
+        let value = document.getElementById('form').value;
+        console.log(value);
+        window.location = "http://localhost:3000/" + value;
+    };
+</script>
+
+{% endblock %}

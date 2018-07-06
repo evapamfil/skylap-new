@@ -1,0 +1,166 @@
+{% extends 'layout.twig' %} {% block body %}
+    <header>
+        <img src="/img/logo.png" class="logo" alt="logo"/>
+        <nav>
+            <a href="">Accueil</a>
+            <a href="">Les compagnies</a>
+            <a href="">Les vols</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="compagny">
+            <h1>Trouver la compagnie aerienne parfaite</h1>
+            <div class="search">
+
+                <input class="input" id="form" value="" type="text" placeholder="Je cherche la compagnie"
+                       name="compagny"
+                       id="compagny"/>
+                <button id="clickMe" value="search"/>
+                Search</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="result">
+        <div class="container-result">
+            <img src="img/footer.png" alt="">
+            <div class="title">
+                <h2>{{ company }}</h2>
+                <h3> Quelles sont les réglementations pour mes valises avec {{ company }} ? </h3>
+                <h3>Quels services sont proposés sur les vols {{ company }} ? </h3>
+                <h3>Comment contacter {{ company }} ?</h3>
+            </div>
+            <div class="article" data-show>
+                <div class="text">
+                    <h2>Le poids des valises autorisé par {{ company }}
+                    </h2>
+                    <h3>Le poids des valises cabine
+                    </h3>
+                    <p>L’ensemble de votre valise cabine peut peser jusqu’à {{ cabine }} selon votre emplacement à
+                        l’intérieur de l’avion, vous pouvez trouver ces informations sur votre billet. Des outils pour
+                        calculer le poids de votre de bagage cabine sont mis à votre disposition à l’aéroport. Votre sac
+                        de
+                        voyage cabine sera vérifié à l’embarquement, s’il dépasse le poids maximum autorisé des frais
+                        seront
+                        ajoutés.
+                    </p>
+                    <h3>Le poids des valises pour la soute</h3>
+                    <p>Votre bagage en soute avec cette compagnie, {{ company }}, doit peser {{ soute }} maximum. Des
+                        options sont possibles pour que vous puissiez transporter plus de poids avec vous, pour cela il
+                        faudra nous contacter. Si votre sac de voyage en soute dépasse ce poids vous devrez payer un
+                        supplément</p>
+                </div>
+                <div class="info-result">
+                    <p>Caractéristique :</p>
+                    <div class="flex">
+                        <div>
+                            <p class="green">Soute</p>
+                            <p>{{ soute }}</p>
+                        </div>
+                        <div class="line"></div>
+                        <div>
+                            <p class="green">Cabine</p>
+                            <p>{{ cabine }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article" data-show>
+                <div class="text">
+                    <h2>Les tailles à ne pas dépasser avec votre bagage</h2>
+                    <h3>Pour les bagages à mains</h3>
+                    <p>Taille à ne pas dépasser pour les bagages à mains : {{ bagagemain }}</p>
+                    <h3>Pour les bagages en soute</h3>
+                    <p>Taille à ne pas dépasser pour la valise en soute : {{ taillesoute }}.</p>
+                </div>
+                <div class="info-result">
+                    <p>Caractéristique :</p>
+                    <div class="flex">
+                        <div>
+                            <p class="green">Soute</p>
+                            <p>{{ taillesoute }}</p>
+                        </div>
+                        <div class="line"></div>
+                        <div>
+                            <p class="green">Cabine</p>
+                            <p>{{ bagagemain }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article" data-show>
+                <div class="text">
+                    <h2>Les services à bords proposés par {{ company }}</h2>
+                    <h3>Les repas à bord de {{ company }}</h3>
+                    <p>En voyageant avec {{ company }}, selon votre classe vous disposez de {{ service }}. Cela dépend
+                        souvent du temps de votre vol ou de votre option de billet.</p>
+                    <h3>La wifi en voyageant avec {{ company }}</h3>
+                    <p>Présence du wifi à bord : {{ wifi }}</p>
+                </div>
+                <div class="info-result">
+                    <p>Caractéristique :</p>
+                    <div class="flex">
+                        <div>
+                            <p class="green">Repas à bord</p>
+                            <p>{{ service }}</p>
+                        </div>
+                        <div class="line"></div>
+                        <div>
+                            <p class="green">Wifi</p>
+                            <p>{{ wifi }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="background" src="img/section1end.png">
+        </div>
+        <div class="info-compagny" data-show>
+            <img class="line-fly" src="img/line-fly.svg" alt="">
+            <img class="fly" src="img/fly.svg" alt="" >
+            <div class="flex">
+                <div>
+                    <p>Notre nom complet : {{ name }}</p>
+                    <p>Cette entreprise a été créée en {{ date }}</p>
+                    <p>Sa nationalité est {{ nationality }}</p>
+                    <p>L’aéroport de base est à {{ base }}</p>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <p>Leur siège social est implanté à {{ siege }}</p>
+                    <p>Les contacter au : {{ number }}</p>
+                    <p>Leur site internet {{ website }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <img src="img/footer.png" alt="">
+        <p>Projet réalisé pour Skylap® dans le cadre de la nuit d’incubation</p>
+
+        <div class="linkfooter">
+            <a href="">Companies aériennes</a>
+            <a href="">Contact</a>
+            <a href="">Plan du site</a>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    </body>
+    </html>
+
+
+    <script type="text/javascript">
+        //- Using an anonymous function:
+        document.getElementById("clickMe").onclick = function (e) {
+            e.preventDefault();
+            console.log('salut')
+            let value = document.getElementById('form').value;
+            console.log(value);
+            window.location = "http://localhost:3000/" + value;
+        };
+    </script>
+
+{% endblock %}

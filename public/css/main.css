@@ -1,0 +1,366 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    background-image: url(../img/homepage.png);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Lato, sans-serif
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px 50px
+}
+
+.home {
+    min-height: 40vh;
+
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+nav a {
+    font-size: 1.25em;
+    margin: 0 15px;
+    color: #eee;
+    text-decoration: none
+}
+
+h1 {
+    color: #eee;
+    font-weight: 400;
+    font-size: 2.5em
+}
+
+a {
+    cursor: pointer
+}
+
+.compagny {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 80px
+}
+
+.search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 50px
+}
+
+.search input {
+    border: none;
+    background-color: #eee;
+    width: 500px;
+    border-radius: 5px 0 0 5px;
+    padding-left: 20px;
+    font-size: 1em
+}
+
+button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #01af9d;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    color: #eee;
+    font-weight: 500;
+    font-size: 1em;
+    border: none;
+    cursor: pointer
+}
+
+footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-height: 171px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+footer img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%
+}
+
+footer p {
+    color: #1d3755;
+    margin: 0;
+    z-index: 1
+}
+
+footer div {
+    z-index: 5
+}
+
+footer a {
+    color: #c5c5c5;
+    display: block;
+    margin: 5px 0;
+    text-decoration: underline
+}
+
+.title {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px
+}
+
+.white {
+    color: #eee
+}
+
+.title h2 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.875em;
+    color: #1d3755;
+}
+
+h3 {
+    font-size: 1.25em;
+    color: #01af9d;
+    text-transform: uppercase
+}
+
+.container-result {
+    margin-top: 200px;
+    position: relative;
+    background-color: #eee;
+    width: 100%
+}
+
+.container-result img:first-child {
+    position: absolute;
+    top: -170px;
+    height: 170px;
+    width: 100%
+}
+
+.article {
+    opacity: 0;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto
+}
+
+.article.showed {
+    opacity: 1;
+    transition: all 1.2s ease;
+}
+
+.text {
+    max-width: 600px
+}
+
+.info-result {
+    width: 280px;
+    min-height: 250px;
+    background-color: #1d3755;
+    border-radius: 5px;
+    padding: 15px;
+    color: #eee;
+    font-size: 1.3em;
+    box-shadow: 2px 2px 20px 0px #1d3755;
+}
+
+.info-result p {
+    margin: 0
+}
+
+.info-result p:nth-child(1) {
+    margin-bottom: 50px
+}
+
+.info-result p.green {
+    margin: 20px 0;
+
+}
+
+p.green + p {
+    width: 100px;
+}
+
+.green {
+    color: #01af9d
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around
+}
+
+.flex .line {
+    height: 100px;
+    background-color: #eee;
+    width: 1px
+}
+
+.background {
+    width: 100%;
+    position: absolute;
+    bottom: -100px;
+    z-index: 1;
+    height: 100Px
+}
+
+.info-compagny {
+    position: relative;
+    margin-top: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1d3755), to(#136470));
+    background-image: -webkit-linear-gradient(#1d3755, #136470);
+    background-image: -o-linear-gradient(#1d3755, #136470);
+    background-image: linear-gradient(#1d3755, #136470);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 50px;
+    padding-bottom: 160px;
+    min-height: 100vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 150px;
+    position: relative
+}
+
+.info-compagny .flex {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 0px #1d3755;
+}
+
+.info-compagny .flex .line {
+    background-color: #1d3755
+}
+
+.info-compagny .flex div {
+    margin: 20px
+}
+
+.info-compagny .flex div p {
+    min-width: 300px
+}
+
+.fly, .line-fly {
+    position: absolute;
+}
+
+.line-fly {
+    left: 0;
+    top: 101px;
+    width: 292px;
+    transform: rotate(-16deg);
+}
+
+.fly {
+    z-index: 10;
+    width: 273px;
+    display: none;
+    transform: rotate(33deg);
+
+}
+
+.info-compagny.showed .fly {
+    display: block;
+    top: -5px;
+    left: 70px;
+    transform: rotate(4deg);
+    animation-duration: 1.2s;
+    animation-name: mouve;
+}
+
+@keyframes mouve {
+    from {
+        display: none;
+        top: 147px;
+        left: -231px;
+        transform: rotate(33deg);
+    }
+
+    to {
+        display: flex;
+        top: -5px;
+        left: 70px;
+        transform: rotate(4deg);
+    }
+}
+
+
